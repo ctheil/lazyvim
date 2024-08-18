@@ -12,6 +12,9 @@ return {
     config = function(_, opts)
       require("neo-tree").setup({
         filesystem = {
+          window = {
+            position = "right",
+          },
           filtered_items = {
             visible = true,
             hide_dotfiles = false,
