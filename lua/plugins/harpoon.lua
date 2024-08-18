@@ -1,3 +1,36 @@
+local h = require("harpoon")
+
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
+--
+
+vim.keymap.set("n", "<leader>a", function()
+  h:list():add()
+end)
+vim.keymap.set("n", "<C-e>", function()
+  h.ui:toggle_quick_menu(h:list())
+end)
+
+vim.keymap.set("n", "<C-y>", function()
+  h:list():select(1)
+end)
+
+vim.keymap.set("n", "<C-u>", function()
+  h:list():select(2)
+end)
+
+vim.keymap.set("n", "<C-i>", function()
+  h:list():select(3)
+end)
+
+vim.keymap.set("n", "<C-o>", function()
+  h:list():select(4)
+end)
+
+vim.keymap.set("n", "<C-p>", function()
+  h:list():select(5)
+end)
+
 return {}
 -- local h = {
 --   "ThePrimeagen/harpoon",
